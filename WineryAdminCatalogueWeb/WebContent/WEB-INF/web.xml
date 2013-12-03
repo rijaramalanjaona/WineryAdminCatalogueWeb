@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>WineryAdminCatalogueWeb</display-name>
+  <servlet>
+      <servlet-name>produits</servlet-name>
+      <servlet-class>com.ingesup.servlet.Application</servlet-class>
+      <init-param>
+            <param-name>urlListe</param-name>
+            <param-value>/WEB-INF/vues/liste.jsp</param-value>
+      </init-param>
+      <init-param>
+            <param-name>urlModif</param-name>
+            <param-value>/WEB-INF/vues/modif.jsp</param-value>
+      </init-param>
+  </servlet>
+  <servlet-mapping>
+      <servlet-name>produits</servlet-name>
+      <url-pattern>/index.html</url-pattern>
+  </servlet-mapping>
+  
+   <error-page>
+   		<exception-type>java.lang.Exception</exception-type>
+   		<location>/WEB-INF/vues/erreurs.jsp</location>
+  </error-page>
+</web-app>
